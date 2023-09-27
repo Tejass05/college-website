@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration</title>
+</head>
+<style>
+    body {
+        background-color: rgb(165, 206, 245);
+    }
+</style>
+<body>
+    <div class="reg"><br>
+        <h1><center>Registration Page</center></h1><br><br><hr>
+    </div>
+    <br>
+    <br>
+    <br>
+
+        <form id="registerform">
+            <label class="label"><b><center>Enter New UserName</center></b></label> &nbsp; &nbsp;
+            <center><input type="text" id="uname" placeholder="Enter Username" required><br></center>
+            <br>
+            <br>
+            <br>
+            <label class="label"><b><center>Enter New Password</center></b></label> &nbsp; &nbsp; &nbsp;
+            <center><input type="password" id="password" placeholder="Enter Password" required><br></center><br><br>
+            <hr>
+            <div class="burger"><br>
+            <center><input type="submit" value="Register" btn-reg></center><br>
+            <center><input type="reset" value="Reset" btn-reset></center><br><hr>
+        </div>
+
+        </form>
+    <script>
+        document.getElementById("registerform").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var uname = document.getElementById("uname").value;
+            var password = document.getElementById("password").value;
+            localStorage.setItem("uname", uname);
+            localStorage.setItem("password", password);
+            window.location.href = "login1.html"
+        })
+    </script>
+</body>
+
+</html>

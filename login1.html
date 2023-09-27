@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login</title>
+    <style>
+      .boxpro {
+        margin-top: 10%;
+        position: absolute;
+        top: 50%;
+        left: 23%;
+        transform: translateY(-50%);
+        text-align: center;
+        width:  900px;
+        height: 450px;
+        border: 1px solid;
+        box-shadow: 1px 1px 10px 10px rgb(236, 153, 153);
+      }
+      #grad1 {
+        /* background: rgb(131,58,180);
+        background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(31,58,248,1) 100%, rgba(252,176,69,1) 100%); */
+        background-image: url('https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+      }
+      .container {
+        position: relative;
+        height: 400px; 
+        }
+      .input-field1 {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT173iaPsZ3mJfQ8Mf3k7KzCtAD4h1D9YSB7X5OnJYRUTo71vNxTzPMv9417Xm8YOn0YKY&usqp=CAU');
+        background-position-x: 10px;
+        background-position-y: 7px;
+        position: relative;
+        background-size: 20px;
+        background-position: absolute;
+        background-repeat: no-repeat;
+        border-radius: 25px;
+        text-align: center;
+        width: 40%;
+        margin-top: 20px;
+        box-sizing: border-box;
+        border: 2px solid;
+        background-color: #5f9ed8;
+        box-shadow: 1px 1px 5px 5px gray;
+        color: rgb(214, 11, 89);
+        padding: 10px;
+        padding-left: 35px;
+    }
+      .input-field2 {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6usoBBqCD54H0TowUwPvr1_MO8OzfpaKW7A&usqp=CAU');
+        background-position-x: 10px;
+        background-position-y: 7px;
+        position: relative;
+        background-size: 20px;
+        background-position: absolute;
+        background-repeat: no-repeat;
+        border-radius: 25px;
+        text-align: center;
+        width: 40%;
+        margin-top: 20px;
+        box-sizing: border-box;
+        border: 2px solid;
+        box-shadow: 1px 1px 5px 5px gray;
+        background-color: #5f9ed8;
+        color: rgb(214, 11, 89);
+        padding: 10px;
+        padding-left: 35px;
+    }
+
+    .button {
+        background-color: #eb1f85; 
+        border: 1px solid;
+        box-shadow: 1px 1px 5px 5px rgb(243, 143, 185);
+        color: rgb(224, 158, 158);
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 30px;
+        width: 15%;
+    }
+    form {
+  height: 90%; 
+}
+
+table {
+   margin: 0 auto;
+   color: white;
+   z-index: 1;
+   width:80%;
+   height: 65%;
+   background-color: transparent;
+}
+a:hover {
+    color:white; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
+    </style>
+  </head>
+  <body id="grad1">
+    <div class="container">
+        <div class="boxpro">
+            <h3 style="color: rgb(189, 255, 7);">USER LOGIN</h3>                    
+            <form method="post" id="loginform">  
+                <table>
+                    <tr>
+                        <td><input type="text" class="input-field1" id="loginuname" placeholder="Username"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" class="input-field2" id="loginpassword" placeholder="Password"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"><span>Remember me  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Forgot password?</span></td>
+                    </tr>
+                    <tr style="margin-top: 50%;">
+                        <td><button class="button" name="submit" type="submit">Login</button></td>
+                    </tr>
+                </table>
+                <center><h4 style="color: rgb(162, 245, 10);">Not a member? <a href="register.html" style="color:  rgb(219, 231, 250);">Register now</a></h4></center>
+            </form>
+            <script>
+              document.getElementById("loginform").addEventListener("submit", function (event) {
+                  event.preventDefault();
+                  var entereduname = document.getElementById("loginuname").value;
+                  var enteredpassword = document.getElementById("loginpassword").value;
+      
+                  var storeduname = localStorage.getItem("uname");
+                  var storedpassword = localStorage.getItem("password");
+      
+                  if (entereduname === storeduname && enteredpassword === storedpassword) {
+                      alert("Login Successfully")
+                      window.location.href = "exams.html"
+                  }
+                  else {
+                      alert("login failed")
+                  }
+              })
+          </script>
+        </div>
+    </div>
+  </body>
+</html>

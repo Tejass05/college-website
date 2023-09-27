@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    width: 200%;
+   
+}
+
+.logo img{
+    width: 150%;
+    border:3px solid blue;
+    border-radius: 50px;
+}
+
+.navbar{
+    display: flex;
+}
+
+.nav-list{
+width: 50%;
+display: flex;
+color: blue;
+align-items: normal;
+
+}
+
+.nav-list li{
+    list-style: none;
+    padding: 26px 30px;
+
+}
+
+.nav-list li a{
+    text-decoration: none;
+    color: rgb(5, 0, 10);
+    font-size: 100%;
+    padding-left: 10%;
+
+}
+
+.nav-list li a:hover{
+    color:rgb(68, 21, 238)
+}
+
+
+
+#search{
+    padding: 5px;
+    font-size: 17px;
+    border: 2px solid gray;
+    border-radius: 9px;
+}
+
+.background{
+    background: rgba(0, 0, 0, 7) url('Ruparel\ college.jpeg');
+    background-size: cover;
+    height: 100vh;
+
+}
+
+.box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-sm{
+    padding: 6px 10px;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.secRight{
+    background-color: rgb(206, 240, 240);
+    height: 50%;
+    display: flex;
+    align-items: right;
+    margin: right;
+    max-width: 70%;
+}
+
+.sectionTag{
+    font-size: x-large;
+    color: black;
+}
+
+.camp{
+    text-align: center;
+    font-size: xx-large;
+}
+
+.campus{
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+}
+
+img1{
+    text-align: right;
+}
+
+.doon{
+    color: cornsilk;
+}
+
+.aut{
+    color: rgb(250, 249, 249);
+}
+
+.au{
+    background-color: rgb(214, 11, 89);
+}
+
+.reg{
+    align-items: center;
+    align-content: center;
+    color: rgb(207, 225, 247);
+    background-color: blue;
+}
+
+.label{
+    color: rgb(0, 0, 0);
+}
+
+.btn-reg{
+    border-width: 80px;
+}
+
+.btn-reset{
+    border-radius: 20%;
+    border-style: dotted;
+    border-width: 80px;
+}
+
+.burger{
+    background-color: blue;
+}
+
+.address{
+    text-align: center;
+    align-content: center;
+}
+
+.number{
+    text-align: right;
+   margin-right: 20%;
+}
+
+.email{
+    text-align: right;
+    margin-right: 70%;
+}
+
+.rightNav{
+    text-decoration: dotted;
+    text-align: right;
+}
+
